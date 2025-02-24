@@ -719,11 +719,15 @@ img {
 
 .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px 30px;
   margin-top: 2rem;
+  align-items: stretch;
 }
 .portfolio-projects {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   overflow: hidden;
   transition: 0.3s;
   border-radius: 5px;
@@ -763,6 +767,7 @@ img {
   font-size: 15px;
   margin: 20px;
   flex-wrap: wrap;
+  min-height: 50px;
 }
 
 /*==================== github stats ====================*/
